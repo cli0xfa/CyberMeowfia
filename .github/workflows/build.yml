@@ -1,0 +1,20 @@
+name: Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        required: true
+        default: 'blazer-CP2A.260605.012'
+      api:
+        required: true
+        default: '35'
+      kernel_tag:
+        required: false
+        default: ''
+
+jobs:
+  test-trigger:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "workflow_dispatch works!"
